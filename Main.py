@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 from datetime import date
-from models import Caballero, Material
+from models import Caballero, Material 
 
 app = FastAPI()
 
 caballero1 = Caballero(1, "Camus de Acurio", Material.BRONCE, 80, "Pegaso")
-caballero2 = Caballero(2, "Mu de Aries", Material.PLATAA, 90, "Dragón")
+caballero2 = Caballero(2, "Mu de Aries", Material.PLATAA, 85, "Dragón")
 caballero3 = Caballero(3, "Shaka de Virgo", Material.ORO, 90, "DEIDAD")
 
 @app.get("/caballero/show")
