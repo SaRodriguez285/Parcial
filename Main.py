@@ -26,9 +26,9 @@ def fight_caballero():
 
 @app.get("/caballero/constelation")
 def show_constelation():
-    return {"constelacion": caballero1.showconstelation()}
-    return {"constelacion": caballero2.showconstelation()}
-    return {"constelacion": caballero3.showconstelation()}
+    return {"constelacion 1": caballero1.showconstelation(), 
+            "constelacion 2": caballero2.showconstelation(), 
+            "constelacion 3": caballero3.showconstelation()}
 
 @app.get("/caballero/showYour")
 def show_your_caballero():
