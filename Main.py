@@ -6,15 +6,23 @@ app = FastAPI()
 
 caballero1 = Caballero(1, "Camus de Acurio", Material.BRONCE, 80, "Pegaso")
 caballero2 = Caballero(2, "Mu de Aries", Material.PLATAA, 85, "Dragón")
-caballero3 = Caballero(3, "Shaka de Virgo", Material.ORO, 90, "DEIDAD")
+caballero3 = Caballero(3, "Shaka de Virgo", Material.ORO, 90, "Deidad")
 
 @app.get("/caballero/show")
 def show_caballero():
     return caballero1.showCaballero()
 
-@app.get("/caballero/fight")
+@app.get("/caballero/fight1")
 def fight_caballero():
     return {"resultado": caballero1.figthCaballero(caballero2)}
+
+@app.get("/caballero/fight2")
+def fight_caballero():
+    return {"resultado": caballero1.figthCaballero(caballero3)}
+
+@app.get("/caballero/fight3")
+def fight_caballero():
+    return {"resultado": caballero2.figthCaballero(caballero3)}
 
 @app.get("/caballero/constelation")
 def show_constelation():
