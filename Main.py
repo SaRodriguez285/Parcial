@@ -8,6 +8,10 @@ caballero1 = Caballero(1, "Camus de Acurio", Material.BRONCE, 80, "Pegaso")
 caballero2 = Caballero(2, "Mu de Aries", Material.PLATAA, 85, "Dragón")
 caballero3 = Caballero(3, "Shaka de Virgo", Material.ORO, 90, "Deidad")
 
+@app.get("/")
+def Funcion_inicio():
+    return {"Hola, este es mi parcial de Sigmotoa :)"}
+
 @app.get("/caballero/show")
 def show_caballero():
     return caballero1.showCaballero()
