@@ -32,4 +32,6 @@ def show_constelation():
 
 @app.get("/caballero/showYour")
 def show_your_caballero():
-    return {"mensaje": caballero1.showYourCaballero(date.today())}
+    return {"El Caballero": caballero1.showYourCaballero(date.today()),
+            "El Caballero": caballero2.showYourCaballero(date.today()),
+            "El Caballero": caballero3.showYourCaballero(date.today())}
